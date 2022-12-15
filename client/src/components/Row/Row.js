@@ -14,8 +14,8 @@ const Row = ({ title, fetchUrl }) => {
       const request = await fetch(fetchUrl, {
         method: "GET",
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          "Access-Control-Allow-Origin": "https://api.themoviedb.org/3",
+          "Content-Type": "text/plain",
         },
       });
       const res = await request.json();
