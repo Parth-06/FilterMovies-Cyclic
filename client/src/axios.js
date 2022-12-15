@@ -2,7 +2,7 @@ import axios from "axios";
 
 const config = {
   headers: {
-    "Access-Control-Allow-Origin": "https://cautious-dog-scrubs.cyclic.app",
+    "Access-Control-Allow-Origin": "https://api.themoviedb.org/3",
     "Content-Type": "text/plain",
   },
 };
