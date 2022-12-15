@@ -2,7 +2,7 @@ import axios from "axios";
 
 const config = {
   headers: {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://cautious-dog-scrubs.cyclic.app",
     "Content-Type": "text/plain",
   },
 };
