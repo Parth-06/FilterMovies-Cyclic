@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: black;
+  height: 100%;
+  scrollbar-color: dark;
+  overflow: auto;
+}
+.home {
+  overflow: auto;
+}
+body::-webkit-scrollbar-thumb {
+  background: #000;
+}
