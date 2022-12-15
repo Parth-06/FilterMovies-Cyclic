@@ -8,10 +8,8 @@ import { useNavigate } from "react-router-dom";
 const MyList = () => {
   const [moviedata, setMoviedata] = useState([]);
   const base_url = "https://image.tmdb.org/t/p/original/";
-  const [remove, setremove] = useState("");
   const [userdata, setUserdata] = useState("");
   const navigate = useNavigate();
-  console.log(moviedata);
 
   const removeList = async (movie) => {
     const removeMovie = moviedata.filter((mov) => {
@@ -49,7 +47,6 @@ const MyList = () => {
       const data = await res.json();
       setMoviedata(data);
       console.log(data);
-      setremove("Next");
     };
     fetchMovie();
   }, []);
