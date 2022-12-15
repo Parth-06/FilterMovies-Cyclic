@@ -1,6 +1,11 @@
 import "./App.css";
 import Home from "./components/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import TvShow from "./components/Home/TvShow";
 import Movies from "./components/Home/Movies";
 import New from "./components/Home/New";
@@ -18,7 +23,7 @@ import Mobilenav from "./components/Navbar/Mobilenav";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tvshow" element={<TvShow />} />
@@ -35,7 +40,7 @@ function App() {
           <Route path="/player" element={<Player />} />
           <Route path="/categories" element={<Mobilenav />} />
         </Routes>
-      </Router>
+      </HashRouter>
       <ToastContainer
         position="top-center"
         autoClose={1000}

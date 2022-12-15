@@ -29,17 +29,35 @@ const Login = () => {
       toast.error("Invaid Login Details");
     } else {
       toast.success("Login successfully");
-
       navigate("/profile", { state: { data: email, pass: password } });
     }
   };
 
-  const filltest = (e) => {
+  const filltest = async (e) => {
     e.preventDefault();
-    const Eval = (e.target.value = "trial@gmail.com");
+    const Eval = "trial@gmail.com";
     setEmail(Eval);
-    const Pass = (e.target.value = "password@123");
+    const Pass = "password@123";
     setPassword(Pass);
+    const res = await fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: Eval,
+        password: Pass,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (res.status === 400 || !data) {
+      toast.error("Invaid Login Details");
+    } else {
+      toast.success("Login successfully");
+      navigate("/profile", { state: { data: Eval, pass: Pass } });
+    }
   };
   return (
     <div className="login" id="login">
