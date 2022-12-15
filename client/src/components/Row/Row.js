@@ -10,12 +10,18 @@ const Row = ({ title, fetchUrl }) => {
   const [moviedata, setMoviedata] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await fetch(fetchUrl);
+    const fetchData = async () => {
+      const request = await fetch(fetchUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
       const res = await request.json();
       setmovies(res.results);
-      return request;
-    }
+    };
+
     fetchData();
   }, [fetchUrl]);
 
