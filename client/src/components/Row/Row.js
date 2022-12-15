@@ -11,8 +11,9 @@ const Row = ({ title, fetchUrl }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(fetchUrl);
-      setmovies(request.data.results);
+      const request = await fetch(fetchUrl);
+      const res = await request.json();
+      setmovies(res.results);
       return request;
     }
     fetchData();

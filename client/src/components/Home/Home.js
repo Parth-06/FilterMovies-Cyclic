@@ -42,7 +42,7 @@ const Home = () => {
       <Nav userdata={userdata} />
       <Banner />
       <Row title="ORIGINALS" fetchUrl={request.fetchNetflixOriginals} />
-      <Row title="Trending Now" fetchUrl={request.fetchTrending} />
+      {/* <Row title="Trending Now" fetchUrl={request.fetchTrending} />
       <Row title="Family Shows" fetchUrl={request.fetchFamilyMovies} />
       <Row title="Action Movies" fetchUrl={request.fetchActionMovies} />
       <Row
@@ -51,7 +51,7 @@ const Home = () => {
       />
       <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
       <Row title="Animation Movies" fetchUrl={request.fetchAnimationMovies} />
-      <Row title="History Shows" fetchUrl={request.fetchHistoryMovies} />
+      <Row title="History Shows" fetchUrl={request.fetchHistoryMovies} /> */}
     </div>
   );
 };
